@@ -12,7 +12,8 @@ class Livro
         puts "Livro: #{@nome}, Ano de lançamento: #{@ano}, Gênero: #{@genero}, Preço: #{@preço}"
     end
 
-    private def dar_desconto(preço) #método privado só pode ser usado dentro da própria classe que foi criado
+    private 
+    def dar_desconto(preço) #método privado só pode ser usado dentro da própria classe que foi criado
         if @ano <= 2000
             preço = preço * 0.9
         else
