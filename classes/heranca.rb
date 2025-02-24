@@ -6,7 +6,7 @@ class Animal
     end
 
     def comunicar
-        puts "Sou a classe mãe AKA super classe"
+        puts "Classe mãe AKA super classe"
     end
 
 end
@@ -20,11 +20,35 @@ class Cachorro < Animal
         @idade = idade
     end
 
+    def comunicar
+        puts "Auuuuuuu mim deeee classe filha cachorro"
+    end
 end
 
-dog1 = Cachorro.new("Warwick", "Husky", 3)
+class Gato < Animal
+    attr_reader :raça, :idade
+
+    def initialize (nome, raça, idade)
+        super(nome)
+        @raça = raça
+        @idade = idade
+    end
+
+    def comunicar
+        puts "MIIIIIIIAAAAAUUUUUUUUUU classe filha gatin"
+    end
+end
+
+dog1 = Cachorro.new("Warwick", "Lobão", 3)
 puts dog1.nome
 puts dog1.raça
 puts dog1.idade
 
 dog1.comunicar
+puts "-----------------"
+cat1 = Gato.new("Rengar", "Gatin", 4)
+puts cat1.nome
+puts cat1.raça
+puts cat1.idade
+
+cat1.comunicar
